@@ -80,6 +80,10 @@ abstract class CameraPlatform extends PlatformInterface {
   Future<XFile> takePicture(int cameraId) {
     throw UnimplementedError('takePicture() is not implemented.');
   }
+  /// Focus when tap
+  Future<bool> tapFocus() {
+    throw UnimplementedError('tapFocus() is not implemented.');
+  }
 
   /// Prepare the capture session for video recording.
   Future<void> prepareForVideoRecording() {
