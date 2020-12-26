@@ -97,6 +97,11 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
           camera.takePicture(result);
           break;
         }
+      case "tapFocus":
+        {
+          camera.tapFocus();
+          break;
+        }
       case "prepareForVideoRecording":
         {
           // This optimization is not required for Android.

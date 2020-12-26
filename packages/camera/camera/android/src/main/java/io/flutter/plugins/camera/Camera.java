@@ -252,6 +252,9 @@ public class Camera {
 
     runPictureAutoFocus();
   }
+  public void tapFocus() {
+    runPictureAutoFocus();
+  }
 
   private final CameraCaptureSession.CaptureCallback pictureCaptureCallback =
       new CameraCaptureSession.CaptureCallback() {

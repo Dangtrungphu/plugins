@@ -253,6 +253,15 @@ class CameraController extends ValueNotifier<CameraValue> {
     }
   }
 
+  Future<bool> tapFocus() async {
+    try {
+      await CameraPlatform.instance.tapFocus(_cameraId);
+      return true;
+    } on PlatformException catch (e) {
+      throw CameraException(e.code, e.message);
+    }
+  }
+
   /// Start streaming images from platform camera.
   ///
   /// Settings for capturing images on iOS and Android is set to always use the
