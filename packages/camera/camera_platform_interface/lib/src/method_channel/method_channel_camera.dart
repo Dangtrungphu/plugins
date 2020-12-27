@@ -142,6 +142,14 @@ class MethodChannelCamera extends CameraPlatform {
   }
 
   @override
+  Future<bool> tapFocus() async {
+    String path = await _channel.invokeMethod<String>(
+      'tapFocus',
+    );
+    return true;
+  }
+
+  @override
   Future<void> prepareForVideoRecording() =>
       _channel.invokeMethod<void>('prepareForVideoRecording');
 
